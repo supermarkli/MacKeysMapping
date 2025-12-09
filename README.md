@@ -1,0 +1,2 @@
+# MacKeysMapping
+使用ahk在windows上实现mac键位的映射
