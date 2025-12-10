@@ -45,6 +45,8 @@ $#b::Send "^b"
 $#s::Send "^s"
 $#-::Send "^-"
 $#=::Send "^="
+$#p::Send "^p"
+$#[::Send "^["
 
 #HotIf
 
@@ -57,6 +59,8 @@ $!+z::Send "^y"         ; 重做 (Alt + Shift + Z -> Ctrl + Y) 实现 Cmd + Shif
 $!a::Send "^a"          ; 全选 (Alt + A -> Ctrl + A) 实现 Cmd + A
 $!s::Send "^s"          ; 保存 (Alt + S -> Ctrl + S) 实现 Cmd + S
 $!/::Send "^/"          ; 注释 (Alt + / -> Ctrl + /) 实现 Cmd + /
+$!p::Send "^p"          ; 搜素 (Alt + P -> Ctrl + P) 实现 Cmd + P
+$![::Send "^["          ; 反缩进 (Alt + [ -> Ctrl + [) 实现 Cmd + [
 $#z::Send "!z"          ; 自动换行 (Win + Z -> Alt + Z) 实现 Cmd + Z
 
 
