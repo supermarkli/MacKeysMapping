@@ -136,6 +136,7 @@ $!0::Send "^0"          ; 恢复大小 (Alt + 0 -> Ctrl + 0) 实现 Cmd + 0
     $!3::Send "^3"          ; 三级标题 (Alt + 3 -> Ctrl + 3) 实现 Cmd + 3
     $!4::Send "^4"          ; 四级标题 (Alt + 4 -> Ctrl + 4) 实现 Cmd + 4
     $!5::Send "^5"          ; 五级标题 (Alt + 5 -> Ctrl + 5) 实现 Cmd + 5
+    $+!l::Send "^+l"        ; 侧边栏开关 (Alt + Shift + L -> Ctrl + Shift + L) 实现 Cmd + Shift + L
 }
 #HotIf
 
