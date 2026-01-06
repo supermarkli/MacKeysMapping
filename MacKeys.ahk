@@ -29,7 +29,7 @@ IsRemoteMac() {
     if (clientName = "")
         return false
 
-    if InStr(clientName, "zihao-macbook") {
+    if InStr(clientName, "macbook") {
         return true
     }
 
