@@ -82,6 +82,18 @@ $#[::Send "^["          ; 反缩进 (Win + [ -> Ctrl + [)
 $#t::Send "^t"          ; 新建标签页 (Win + T -> Ctrl + T)
 $#+k::Send "^+k"        ; 插入代码块 (Win + Shift + K -> Ctrl + Shift + K)
 
+; ---- 光标移动 (Mac 上 Cmd+方向键) ----
+$#Left::Send "{Home}"       ; Win + 左箭头 -> Home (行首)
+$#Right::Send "{End}"       ; Win + 右箭头 -> End (行尾)
+$#Up::Send "^{Home}"        ; Win + 上箭头 -> Ctrl+Home (文档头)
+$#Down::Send "^{End}"       ; Win + 下箭头 -> Ctrl+End (文档尾)
+
+; ---- Rectangle 分屏控制 (Mac 上 Ctrl+Option+方向键) ----
+$^!Left::Send "#{Left}"     ; Ctrl + Option + 左箭头 -> Win + 左箭头 (左半屏)
+$^!Right::Send "#{Right}"   ; Ctrl + Option + 右箭头 -> Win + 右箭头 (右半屏)
+$^!Up::Send "#{Up}"         ; Ctrl + Option + 上箭头 -> Win + 上箭头 (最大化)
+$^!Down::Send "#{Down}"     ; Ctrl + Option + 下箭头 -> Win + 下箭头 (还原)
+
 #HotIf
 
 ; ============================================================================
@@ -202,5 +214,11 @@ $#3::Send "^!3"         ; 截图 (Win + 3 -> Ctrl + Alt + 3) 实现 Cmd + 3
         Send "{LWin}"
     }
 }
+
+; ---- Rectangle 分屏控制 (本地 Ctrl+Win+方向键) ----
+$^#Left::Send "#{Left}"    ; Ctrl + Win + 左箭头 -> Win + 左箭头 (左半屏)
+$^#Right::Send "#{Right}"  ; Ctrl + Win + 右箭头 -> Win + 右箭头 (右半屏)
+$^#Up::Send "#{Up}"        ; Ctrl + Win + 上箭头 -> Win + 上箭头 (最大化)
+$^#Down::Send "#{Down}"    ; Ctrl + Win + 下箭头 -> Win + 下箭头 (还原)
 
 #HotIf
