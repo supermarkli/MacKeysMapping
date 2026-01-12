@@ -82,6 +82,10 @@ $#[::Send "^["          ; 反缩进 (Win + [ -> Ctrl + [)
 $#t::Send "^t"          ; 新建标签页 (Win + T -> Ctrl + T)
 $#+k::Send "^+k"        ; 插入代码块 (Win + Shift + K -> Ctrl + Shift + K)
 
+; ---- 浏览器快捷键 ----
+$#r::Send "{F5}"         ; 刷新页面 (Win + R -> F5) 实现 Cmd + R
+$!r::Send "#r"           ; 运行对话框 (Alt + R -> Win + R) 实现 Option + R
+
 ; ---- 光标移动 (Mac 上 Cmd+方向键) ----
 $#Left::Send "{Home}"       ; Win + 左箭头 -> Home (行首)
 $#Right::Send "{End}"       ; Win + 右箭头 -> End (行尾)
