@@ -62,6 +62,23 @@ GetRdpClientName() {
 
 #HotIf IsRemoteMac()
 
+; ---- 浏览器专属 (Chrome, Edge, Firefox) ----
+#HotIf IsRemoteMac() && (WinActive("ahk_exe chrome.exe") || WinActive("ahk_exe msedge.exe") || WinActive("ahk_exe firefox.exe"))
+{
+    $#1::Send "^1"         ; 跳转第1个标签 (Win + 1 -> Ctrl + 1) 实现 Cmd + 1
+    $#2::Send "^2"         ; 跳转第2个标签 (Win + 2 -> Ctrl + 2) 实现 Cmd + 2
+    $#3::Send "^3"         ; 跳转第3个标签 (Win + 3 -> Ctrl + 3) 实现 Cmd + 3
+    $#4::Send "^4"         ; 跳转第4个标签 (Win + 4 -> Ctrl + 4) 实现 Cmd + 4
+    $#5::Send "^5"         ; 跳转第5个标签 (Win + 5 -> Ctrl + 5) 实现 Cmd + 5
+    $#6::Send "^6"         ; 跳转第6个标签 (Win + 6 -> Ctrl + 6) 实现 Cmd + 6
+    $#7::Send "^7"         ; 跳转第7个标签 (Win + 7 -> Ctrl + 7) 实现 Cmd + 7
+    $#8::Send "^8"         ; 跳转第8个标签 (Win + 8 -> Ctrl + 8) 实现 Cmd + 8
+    $#9::Send "^9"         ; 跳转第9个标签 (Win + 9 -> Ctrl + 9) 实现 Cmd + 9
+}
+#HotIf
+
+#HotIf IsRemoteMac()
+
 ; Alt + Tab -> Win + Tab (任务切换)
 $!Tab::
 {
@@ -161,6 +178,15 @@ $!0::Send "^0"          ; 恢复大小 (Alt + 0 -> Ctrl + 0) 实现 Cmd + 0
 {
     $!Left::Send "!{Left}"      ; 后退 (Alt + Left -> Alt + Left) 实现 Cmd + [
     $!Right::Send "!{Right}"    ; 前进 (Alt + Right -> Alt + Right) 实现 Cmd + ]
+    $!1::Send "^1"              ; 跳转第1个标签 (Alt + 1 -> Ctrl + 1) 实现 Cmd + 1
+    $!2::Send "^2"              ; 跳转第2个标签 (Alt + 2 -> Ctrl + 2) 实现 Cmd + 2
+    $!3::Send "^3"              ; 跳转第3个标签 (Alt + 3 -> Ctrl + 3) 实现 Cmd + 3
+    $!4::Send "^4"              ; 跳转第4个标签 (Alt + 4 -> Ctrl + 4) 实现 Cmd + 4
+    $!5::Send "^5"              ; 跳转第5个标签 (Alt + 5 -> Ctrl + 5) 实现 Cmd + 5
+    $!6::Send "^6"              ; 跳转第6个标签 (Alt + 6 -> Ctrl + 6) 实现 Cmd + 6
+    $!7::Send "^7"              ; 跳转第7个标签 (Alt + 7 -> Ctrl + 7) 实现 Cmd + 7
+    $!8::Send "^8"              ; 跳转第8个标签 (Alt + 8 -> Ctrl + 8) 实现 Cmd + 8
+    $!9::Send "^9"              ; 跳转第9个标签 (Alt + 9 -> Ctrl + 9) 实现 Cmd + 9
 }
 #HotIf
 
