@@ -190,11 +190,19 @@ $!0::Send "^0"          ; 恢复大小 (Alt + 0 -> Ctrl + 0) 实现 Cmd + 0
 }
 #HotIf
 
-; ---- VS Code 专属 ----
+; ---- VS Code 专属 (MacRDP 模式) ----
+#HotIf IsRemoteMac() && WinActive("ahk_exe Code.exe")
+{
+    $#j::Send "^j"          ; 切换终端 (Win + J -> Ctrl + J) 实现 Cmd + J
+}
+#HotIf
+
+; ---- VS Code 专属 (Windows 本地模式) ----
 #HotIf !IsRemoteMac() && WinActive("ahk_exe Code.exe")
 {
     $!+p::Send "^+p"        ; 命令面板 (Alt + Shift + P -> Ctrl + Shift + P) 实现 Cmd + Shift + P
     $!g::Send "^g"          ; 跳转行号 (Alt + G -> Ctrl + G) 实现 Cmd + G
+    $!j::Send "^j"          ; 切换终端 (Alt + J -> Ctrl + J) 实现 Cmd + J
 }
 #HotIf
 
