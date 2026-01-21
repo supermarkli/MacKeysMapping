@@ -193,7 +193,9 @@ $!0::Send "^0"          ; 恢复大小 (Alt + 0 -> Ctrl + 0) 实现 Cmd + 0
 ; ---- VS Code 专属 (MacRDP 模式) ----
 #HotIf IsRemoteMac() && WinActive("ahk_exe Code.exe")
 {
-    $#j::Send "^j"          ; 切换终端 (Win + J -> Ctrl + J) 实现 Cmd + J
+    $#j::Send "^j"          ; 切换终端面板 (Win + J -> Ctrl + J) 实现 Cmd + J
+    $#]::Send "^+]"         ; 下一个终端 (Win + ] -> Ctrl + Shift + ]) 实现 Cmd + Shift + ]
+    $#[::Send "^+["         ; 上一个终端 (Win + [ -> Ctrl + Shift + [) 实现 Cmd + Shift + [
 }
 #HotIf
 
@@ -202,7 +204,9 @@ $!0::Send "^0"          ; 恢复大小 (Alt + 0 -> Ctrl + 0) 实现 Cmd + 0
 {
     $!+p::Send "^+p"        ; 命令面板 (Alt + Shift + P -> Ctrl + Shift + P) 实现 Cmd + Shift + P
     $!g::Send "^g"          ; 跳转行号 (Alt + G -> Ctrl + G) 实现 Cmd + G
-    $!j::Send "^j"          ; 切换终端 (Alt + J -> Ctrl + J) 实现 Cmd + J
+    $!j::Send "^j"          ; 切换终端面板 (Alt + J -> Ctrl + J) 实现 Cmd + J
+    $!]::Send "^+]"         ; 下一个终端 (Alt + ] -> Ctrl + Shift + ]) 实现 Cmd + Shift + ]
+    $![::Send "^+["         ; 上一个终端 (Alt + [ -> Ctrl + Shift + [) 实现 Cmd + Shift + [
 }
 #HotIf
 
