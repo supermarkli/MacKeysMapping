@@ -193,6 +193,7 @@ $!0::Send "^0"          ; 恢复大小 (Alt + 0 -> Ctrl + 0) 实现 Cmd + 0
 ; ---- VS Code 专属 (MacRDP 模式) ----
 #HotIf IsRemoteMac() && WinActive("ahk_exe Code.exe")
 {
+    $#+p::Send "^+p"        ; 命令面板 (Win + Shift + P -> Ctrl + Shift + P) 实现 Cmd + Shift + P
     $#j::Send "^j"          ; 切换终端面板 (Win + J -> Ctrl + J) 实现 Cmd + J
     $#]::Send "^+]"         ; 下一个终端 (Win + ] -> Ctrl + Shift + ]) 实现 Cmd + Shift + ]
     $#[::Send "^+["         ; 上一个终端 (Win + [ -> Ctrl + Shift + [) 实现 Cmd + Shift + [
