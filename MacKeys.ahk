@@ -170,14 +170,14 @@ $!0::Send "^0"          ; 恢复大小 (Alt + 0 -> Ctrl + 0) 实现 Cmd + 0
     $!4::Send "^4"          ; 四级标题 (Alt + 4 -> Ctrl + 4) 实现 Cmd + 4
     $!5::Send "^5"          ; 五级标题 (Alt + 5 -> Ctrl + 5) 实现 Cmd + 5
     $+!l::Send "^+l"        ; 侧边栏开关 (Alt + Shift + L -> Ctrl + Shift + L) 实现 Cmd + Shift + L
+    $!]::Send "^["          ; 缩进 (Alt + ] -> Ctrl + [) 实现 Cmd + ]
+    $![::Send "^]"          ; 反缩进 (Alt + [ -> Ctrl + ]) 实现 Cmd + [
 }
 #HotIf
 
 ; ---- 浏览器专属 (Chrome, Edge, Firefox) ----
 #HotIf !IsRemoteMac() && (WinActive("ahk_exe chrome.exe") || WinActive("ahk_exe msedge.exe") || WinActive("ahk_exe firefox.exe"))
 {
-    $!Left::Send "!{Left}"      ; 后退 (Alt + Left -> Alt + Left) 实现 Cmd + [
-    $!Right::Send "!{Right}"    ; 前进 (Alt + Right -> Alt + Right) 实现 Cmd + ]
     $!1::Send "^1"              ; 跳转第1个标签 (Alt + 1 -> Ctrl + 1) 实现 Cmd + 1
     $!2::Send "^2"              ; 跳转第2个标签 (Alt + 2 -> Ctrl + 2) 实现 Cmd + 2
     $!3::Send "^3"              ; 跳转第3个标签 (Alt + 3 -> Ctrl + 3) 实现 Cmd + 3
@@ -187,6 +187,8 @@ $!0::Send "^0"          ; 恢复大小 (Alt + 0 -> Ctrl + 0) 实现 Cmd + 0
     $!7::Send "^7"              ; 跳转第7个标签 (Alt + 7 -> Ctrl + 7) 实现 Cmd + 7
     $!8::Send "^8"              ; 跳转第8个标签 (Alt + 8 -> Ctrl + 8) 实现 Cmd + 8
     $!9::Send "^9"              ; 跳转第9个标签 (Alt + 9 -> Ctrl + 9) 实现 Cmd + 9
+    $![::Send "!{Left}"         ; 后退 (Alt + [ -> Alt + Left) 实现 Cmd + [
+    $!]::Send "!{Right}"        ; 前进 (Alt + ] -> Alt + Right) 实现 Cmd + ]
 }
 #HotIf
 
@@ -259,9 +261,10 @@ $#3::Send "^!3"         ; 截图 (Win + 3 -> Ctrl + Alt + 3) 实现 Cmd + 3
 }
 
 ; ---- Rectangle 分屏控制 (本地 Ctrl+Win+方向键) ----
-$^#Left::Send "#{Left}"    ; Ctrl + Win + 左箭头 -> Win + 左箭头 (左半屏)
-$^#Right::Send "#{Right}"  ; Ctrl + Win + 右箭头 -> Win + 右箭头 (右半屏)
-$^#Up::Send "#{Up}"        ; Ctrl + Win + 上箭头 -> Win + 上箭头 (最大化)
-$^#Down::Send "#{Down}"    ; Ctrl + Win + 下箭头 -> Win + 下箭头 (还原)
+; 注释掉以恢复 Windows 系统默认的 Win+Ctrl+方向键虚拟桌面切换功能
+; $^#Left::Send "#{Left}"    ; Ctrl + Win + 左箭头 -> Win + 左箭头 (左半屏)
+; $^#Right::Send "#{Right}"  ; Ctrl + Win + 右箭头 -> Win + 右箭头 (右半屏)
+; $^#Up::Send "#{Up}"        ; Ctrl + Win + 上箭头 -> Win + 上箭头 (最大化)
+; $^#Down::Send "#{Down}"    ; Ctrl + Win + 下箭头 -> Win + 下箭头 (还原)
 
 #HotIf
