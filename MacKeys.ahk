@@ -233,6 +233,7 @@ $!+Down::Send "^+{End}"     ; 选中至文档尾 (Alt + Shift + Down -> Ctrl + S
 
 ; ---- 系统快捷键 ----
 $!e::Send "#e"          ; 打开资源管理器 (Alt + E -> Win + E) 实现 Cmd + E
+$!m::WinMinimize "A"    ; 最小化当前窗口 (Alt + M) 实现 Cmd + M
 
 ; ---- 聚焦搜索 (Alt + Space -> Win + S) 实现 Cmd + Space ----
 ; 使用 ~ 前缀允许原生 Alt+Space 行为，延迟触发 Win+S
