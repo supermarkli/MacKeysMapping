@@ -231,6 +231,9 @@ $!+Right::Send "+{End}"     ; 选中至行尾 (Alt + Shift + Right -> Shift + En
 $!+Up::Send "^+{Home}"      ; 选中至文档头 (Alt + Shift + Up -> Ctrl + Shift + Home) 实现 Cmd + Shift + Up
 $!+Down::Send "^+{End}"     ; 选中至文档尾 (Alt + Shift + Down -> Ctrl + Shift + End) 实现 Cmd + Shift + Down
 
+; ---- 删除键映射 ----
+$^Backspace::Send "{Delete}" ; Ctrl + Backspace -> Delete，便于删除文件
+
 ; ---- 系统快捷键 ----
 $!e::Send "#e"          ; 打开资源管理器 (Alt + E -> Win + E) 实现 Cmd + E
 $!m::WinMinimize "A"    ; 最小化当前窗口 (Alt + M) 实现 Cmd + M
